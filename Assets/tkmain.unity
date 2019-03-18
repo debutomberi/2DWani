@@ -384,8 +384,6 @@ MonoBehaviour:
   - {fileID: 1068281663923292, guid: 33536be7968d44c458b7148a5033b5bd, type: 2}
   - {fileID: 1363426576642788, guid: 7c5abcf958af2984b8d79450fac2253f, type: 2}
   canvas: {fileID: 1126540148}
-  i: 0
-  objCount: 0
 --- !u!1 &1782702380
 GameObject:
   m_ObjectHideFlags: 0
