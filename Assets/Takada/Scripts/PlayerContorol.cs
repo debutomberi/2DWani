@@ -21,8 +21,7 @@ public class PlayerContorol : MonoBehaviour {
 	}
 
     // 移動関数
-    void Move()
-    {
+    void Move() {
         var inputX = Input.GetAxisRaw("Horizontal");
         var inputY = Input.GetAxisRaw("Vertical");
 
