@@ -8,8 +8,7 @@ public class WaniBite : MonoBehaviour {
     public Collider2D agoCollider;
 
     // 口の中に含んでいる魚の数
-    public int fishCount = 0;
-
+    public static int fishCount = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -17,19 +16,21 @@ public class WaniBite : MonoBehaviour {
         // 当たり判定の取得
         agoCollider = GetComponent<Collider2D>();
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D col) {
 
-        if(collision.tag == "Fish") {
+        // 魚が顎に触れたら魚を消してfishCountを＋１
+        if(col.tag == "Fish") {
 
             fishCount += 1;
-            Debug.Log(fishCount);
+            Destroy(col.gameObject);
+            // Debug.Log(fishCount);
 
         }
 
