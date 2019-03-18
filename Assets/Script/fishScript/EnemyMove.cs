@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour {
         objCount = transform.childCount;
 
         //魚が盤面の上限を決める
-        if (objCount < 8)
+        if (objCount < 16)
         {
             Move();
         }
@@ -30,9 +30,9 @@ public class EnemyMove : MonoBehaviour {
     private void Move()
     {
         GameObject enemy = Instantiate(fish[i]) as GameObject;
-        float px = Random.Range(-8f, 8f);
-        float py = Random.Range(-3.0f, 3.0f);
+        float px = Random.Range(-15f, 15f);
+        float py = Random.Range(-8.0f, 8.0f);
         enemy.transform.SetParent(canvas.transform, false);
         enemy.transform.position = new Vector2(px, py);
-    }
+    } 
 }
