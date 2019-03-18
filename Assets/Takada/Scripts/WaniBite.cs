@@ -47,10 +47,11 @@ public class WaniBite : MonoBehaviour {
         if(col.tag == "Fish") {
 
             fishCount += 1;
-            Destroy(col.gameObject);
+
             Debug.Log(fishCount);
 
         }
+        
 
     }
 }
