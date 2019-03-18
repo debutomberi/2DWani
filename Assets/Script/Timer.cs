@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
@@ -28,7 +29,10 @@ public class Timer : MonoBehaviour {
             second--;
             if (second < 0) { minute--; second = 59;  }
             timerText.text = string.Format("{0:D2}",minute) + ":" + string.Format("{0:D2}", second);
-            if(second == 0 && minute == 0) { TimeEnd = true; }
+            if(second == 0 && minute == 0) {
+                TimeEnd = true;
+                SceneManager.LoadScene("result");
+            }
         }
     }
 }
