@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
+    [SerializeField]
+    Rigidbody2D rd;
     int width;
 
     float speed;
@@ -24,6 +26,7 @@ public class EnemyController : MonoBehaviour {
         //スケールを取得
         Scale = transform.localScale;
         Enemy();
+        StartCoroutine("Rdo");
     }
 	
 	void Update ()
@@ -45,6 +48,15 @@ public class EnemyController : MonoBehaviour {
         {
             switching3 = true;
             speed *= -1;
+        }
+    }
+
+    private IEnumerator Rdo()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(10.0f);
+            rd.gravityScale *= -1;            
         }
     }
 
