@@ -8,7 +8,7 @@ public class WaniBite : MonoBehaviour {
     public Collider2D agoCollider;
 
     // 口の中に含んでいる魚の数
-    public static int fishCount = 0;
+    public static int fishCount;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +34,7 @@ public class WaniBite : MonoBehaviour {
             if (Input.GetButton("swallow")) {
 
                 fishCount = 0;
+                
                 Debug.Log("ごっくん！");
 
             }
@@ -41,17 +42,14 @@ public class WaniBite : MonoBehaviour {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D col) {
-
-        // 魚が顎に触れたら魚を消してfishCountを＋１
-        if(col.tag == "Fish") {
-
+    // 魚に触れたらカウントを＋１
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Fish") {
+            Destroy(col.gameObject);
             fishCount += 1;
 
-            Debug.Log(fishCount);
-
         }
-        
-
     }
+
 }
