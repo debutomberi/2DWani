@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour {
 
     float speed;
     float time = 0;
+
     bool switching;
     bool switching2;
     bool switching3;
@@ -16,8 +17,10 @@ public class EnemyController : MonoBehaviour {
 
     void Start ()
     {
-        speed = Random.Range(0.5f,1f);
+        //初期スピードの設定
+        speed = Random.Range(0.03f,0.01f);
         width = Random.Range(2, 4);
+
         //スケールを取得
         Scale = transform.localScale;
         Enemy();
@@ -29,6 +32,9 @@ public class EnemyController : MonoBehaviour {
         EnemyMove();
     }
     
+    /// <summary>
+    /// 魚の向きを取得
+    /// </summary>
     private void Enemy()
     {
         if(Scale.x < 0)
@@ -40,39 +46,42 @@ public class EnemyController : MonoBehaviour {
             switching3 = true;
             speed *= -1;
         }
-
     }
 
+    /// <summary>
+    /// 魚の動き
+    /// </summary>
     private void EnemyMove()
     {
-        //魚の動き 
         transform.position += transform.right * speed;
         if (time > width)
         {
+            //魚の向きが左の時
             if (switching2 == true)
             { 
                 if (switching == true)
                 {
-                    speed = Random.Range(0.5f, 1f);
+                    speed = Random.Range(0.03f, 0.01f);
                     switching = false;
                 }
                 else
                 {
-                    speed = Random.Range(-0.5f, -1f);
+                    speed = Random.Range(-0.03f, -0.01f);
                     switching = true;
                 }
             }
 
+            //魚の向きが右の時
             if (switching3 == true)
             { 
                 if (switching == true)
                 {
-                    speed = Random.Range(-0.5f, -1f);
+                    speed = Random.Range(-0.03f, -0.01f);
                     switching = false;
                 }
                 else
                 {
-                    speed = Random.Range(0.5f, 1f);
+                    speed = Random.Range(0.03f, 0.01f);
                     switching = true;
                 }
             }
