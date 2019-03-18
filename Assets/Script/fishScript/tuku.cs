@@ -6,8 +6,8 @@ public class tuku : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        //Rigidbody rd = gameObject.GetComponent<Rigidbody>();
-        //rd.isKinematic = false;
-        //Debug.Log("sasa");
+        Rigidbody2D rd = gameObject.GetComponent<Rigidbody2D>();
+        rd.isKinematic = false;
+        Debug.Log("sasa");
     }
 }

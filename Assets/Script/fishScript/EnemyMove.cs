@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour {
         objCount = transform.childCount;
 
         //魚が盤面の上限を決める
-        if (objCount < 16)
+        if (objCount < 36)
         {
             Move();
         }
