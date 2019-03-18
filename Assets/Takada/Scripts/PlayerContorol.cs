@@ -8,8 +8,6 @@ public class PlayerContorol : MonoBehaviour {
     // 速度
     float speed = 0.1f;
 
-    float inputValue;
-
     // Use this for initialization
     void Start () {
 		
@@ -36,7 +34,7 @@ public class PlayerContorol : MonoBehaviour {
         if(inputX <= 0) {
 
             scale.x = 1;
-            
+
 
         } else {
 
@@ -46,7 +44,7 @@ public class PlayerContorol : MonoBehaviour {
 
         // 代入し直す
         transform.localScale = scale;
-        Debug.Log(scale);
+        // Debug.Log(scale);
 
     }
 }

@@ -20,8 +20,26 @@ public class WaniBite : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+        // 飲み込む処理
+        Swallow();
 	}
+
+    // 飲み込む関数
+    void Swallow() {
+
+        // 魚を含んでいる時に飲み込むボタンを押すとカウントを0にしてスコア加算
+        if (fishCount >= 1) {
+
+            if (Input.GetButton("swallow")) {
+
+                fishCount = 0;
+                Debug.Log("ごっくん！");
+
+            }
+        }
+
+    }
 
     private void OnTriggerEnter2D(Collider2D col) {
 
@@ -30,7 +48,7 @@ public class WaniBite : MonoBehaviour {
 
             fishCount += 1;
             Destroy(col.gameObject);
-            // Debug.Log(fishCount);
+            Debug.Log(fishCount);
 
         }
 
