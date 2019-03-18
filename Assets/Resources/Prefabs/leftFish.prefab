@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 114225940587991238}
   - component: {fileID: 50687898167488766}
   - component: {fileID: 60558109309059360}
+  - component: {fileID: 114497230173797580}
   m_Layer: 0
   m_Name: leftFish
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,6 +258,18 @@ PolygonCollider2D:
       - {x: -2.08, y: -0.71}
       - {x: -2.06, y: -0.7}
 --- !u!114 &114225940587991238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1333405559209858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b29194f5009e1b64cb3ad28d998d0abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rd: {fileID: 50687898167488766}
+--- !u!114 &114497230173797580
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

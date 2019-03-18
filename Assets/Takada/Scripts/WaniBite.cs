@@ -42,14 +42,16 @@ public class WaniBite : MonoBehaviour {
 
     }
 
-    // 魚に触れたらカウントを＋１
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "Fish") {
-            Destroy(col.gameObject);
+        if(col.gameObject.tag == "Fish") {
+
             fishCount += 1;
+            Destroy(col.gameObject);
+            Debug.Log(fishCount);
 
         }
+        
     }
 
 }
