@@ -51,6 +51,10 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// 魚が無限に上下する
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator Rdo()
     {
         while (true)
@@ -103,5 +107,18 @@ public class EnemyController : MonoBehaviour {
             time = 0;            
         }
         transform.localScale = Scale;
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "ago")
+        {
+            transform.parent = col.gameObject.transform;
+            switching2 = false;
+            switching3 = false;
+            speed = 0;
+            rd.gravityScale = 0;
+            Debug.Log("tata");
+        }
     }
 }

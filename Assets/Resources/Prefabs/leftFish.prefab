@@ -20,12 +20,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4616972586344174}
   - component: {fileID: 212054211822963594}
+  - component: {fileID: 114225940587991238}
   - component: {fileID: 50687898167488766}
-  - component: {fileID: 114497230173797580}
-  - component: {fileID: 61854828893333310}
-  m_Layer: 0
+  - component: {fileID: 61213048465643318}
+  m_Layer: 9
   m_Name: leftFish
-  m_TagString: Fish
+  m_TagString: FishLeft
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,8 +62,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &61854828893333310
+  m_Constraints: 7
+--- !u!61 &61213048465643318
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.022773743, y: -0.15942097}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -86,9 +86,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 6}
+  m_Size: {x: 7.59006, y: 5.4078665}
   m_EdgeRadius: 0
---- !u!114 &114497230173797580
+--- !u!114 &114225940587991238
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b29194f5009e1b64cb3ad28d998d0abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rd: {fileID: 0}
+  rd: {fileID: 50687898167488766}
 --- !u!212 &212054211822963594
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,7 +131,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c95193a4b6d3a4a4aa454e36e84ba776, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
