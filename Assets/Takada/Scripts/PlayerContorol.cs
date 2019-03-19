@@ -7,11 +7,6 @@ public class PlayerContorol : MonoBehaviour {
 
     // 速度
     float speed = 0.1f;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,5 +41,13 @@ public class PlayerContorol : MonoBehaviour {
         transform.localScale = scale;
         // Debug.Log(scale);
 
+    }
+
+    // 口の中の中の魚の分だけスピードを下げる
+    void SpeedDown()
+    {
+        float childCount = WaniBite.fishCount; // 子オブジェクトの数を取得
+        float bobSpeed = childCount * 0.001f;　// 重さ
+        speed = speed - bobSpeed;              
     }
 }

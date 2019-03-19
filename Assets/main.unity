@@ -110,6 +110,34 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &380418737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 380418738}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &380418738
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380418737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.2799997, y: 0.21000001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &446222078
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,12 +147,12 @@ GameObject:
   m_Component:
   - component: {fileID: 446222080}
   - component: {fileID: 446222079}
-  - component: {fileID: 446222081}
   - component: {fileID: 446222082}
   - component: {fileID: 446222083}
+  - component: {fileID: 446222081}
   m_Layer: 0
   m_Name: wanisitaago
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,11 +208,11 @@ Transform:
   m_LocalPosition: {x: -2.6999998, y: -2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 490240518}
-  m_RootOrder: 0
+  m_Father: {fileID: 1315430995}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.168001}
---- !u!60 &446222081
-PolygonCollider2D:
+--- !u!61 &446222081
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -195,7 +223,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.6853148, y: -0.1506052}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -205,67 +233,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.59999996, y: -0.58}
-      - {x: 0.91999996, y: -0.53}
-      - {x: 1.1, y: -0.52}
-      - {x: 1.55, y: -0.39}
-      - {x: 1.8399999, y: -0.29999998}
-      - {x: 1.9, y: -0.26}
-      - {x: 2.03, y: -0.14}
-      - {x: 2.09, y: 0.049999997}
-      - {x: 2.1, y: 0.14999999}
-      - {x: 2.1, y: 0.19999999}
-      - {x: 2.05, y: 0.29999998}
-      - {x: 1.9499999, y: 0.38}
-      - {x: 1.8399999, y: 0.42999998}
-      - {x: 1.79, y: 0.45}
-      - {x: 1.75, y: 0.45999998}
-      - {x: 1.56, y: 0.47}
-      - {x: 1.4, y: 0.51}
-      - {x: 1.15, y: 0.53}
-      - {x: 0.96, y: 0.53}
-      - {x: 0.76, y: 0.5}
-      - {x: 0.63, y: 0.45}
-      - {x: 0.26, y: 0.29999998}
-      - {x: -0.03, y: 0.19999999}
-      - {x: -0.11, y: 0.34}
-      - {x: -0.21, y: 0.53999996}
-      - {x: -0.26999998, y: 0.58}
-      - {x: -0.34, y: 0.38}
-      - {x: -0.32, y: 0.21}
-      - {x: -0.29999998, y: 0.14}
-      - {x: -0.56, y: 0.16}
-      - {x: -0.74, y: 0.45999998}
-      - {x: -0.84, y: 0.61}
-      - {x: -0.90999997, y: 0.64}
-      - {x: -0.95, y: 0.58}
-      - {x: -0.93, y: 0.24}
-      - {x: -0.97999996, y: 0.17999999}
-      - {x: -1.2099999, y: 0.28}
-      - {x: -1.35, y: 0.45}
-      - {x: -1.42, y: 0.63}
-      - {x: -1.4699999, y: 0.7}
-      - {x: -1.53, y: 0.7}
-      - {x: -1.5799999, y: 0.63}
-      - {x: -1.61, y: 0.45}
-      - {x: -1.62, y: 0.28}
-      - {x: -1.63, y: 0.14999999}
-      - {x: -1.74, y: 0.11}
-      - {x: -1.9599999, y: 0.11}
-      - {x: -2.03, y: 0.08}
-      - {x: -2.05, y: 0.03}
-      - {x: -2.05, y: -0.13}
-      - {x: -1.9399999, y: -0.35}
-      - {x: -1.8399999, y: -0.45}
-      - {x: -1.62, y: -0.63}
-      - {x: -1.43, y: -0.75}
-      - {x: -1.1899999, y: -0.78}
-      - {x: -0.63, y: -0.78}
-      - {x: -0.22, y: -0.71999997}
-      - {x: -0.02, y: -0.63}
-      - {x: 0.41, y: -0.61}
+  serializedVersion: 2
+  m_Size: {x: 2.9437726, y: 1.2762365}
+  m_EdgeRadius: 0
 --- !u!114 &446222082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agoCollider: {fileID: 446222081}
+  parentObj: {fileID: 380418737}
 --- !u!50 &446222083
 Rigidbody2D:
   serializedVersion: 4
@@ -298,36 +269,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &490240517
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 490240518}
-  m_Layer: 0
-  m_Name: agos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &490240518
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 490240517}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 446222080}
-  - {fileID: 2145508801}
-  m_Father: {fileID: 1315430995}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &537267479
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +500,7 @@ GameObject:
   - component: {fileID: 1133947382}
   m_Layer: 0
   m_Name: wanihonntai
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -629,7 +570,7 @@ GameObject:
   - component: {fileID: 1315430996}
   m_Layer: 0
   m_Name: wani
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +586,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1133947383}
-  - {fileID: 490240518}
+  - {fileID: 446222080}
+  - {fileID: 2145508801}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -977,12 +919,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2145508801}
   - component: {fileID: 2145508800}
-  - component: {fileID: 2145508802}
   - component: {fileID: 2145508803}
   - component: {fileID: 2145508804}
+  - component: {fileID: 2145508802}
   m_Layer: 0
   m_Name: waniuwaago
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,11 +980,11 @@ Transform:
   m_LocalPosition: {x: -2.38, y: 0.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 490240518}
-  m_RootOrder: 1
+  m_Father: {fileID: 1315430995}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -42.79}
---- !u!60 &2145508802
-PolygonCollider2D:
+--- !u!61 &2145508802
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1053,7 +995,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.7865745, y: -0.39386982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1063,78 +1005,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.049999997, y: -0.78}
-      - {x: 0.19999999, y: -0.84999996}
-      - {x: 0.42, y: -0.98999995}
-      - {x: 0.62, y: -1.0799999}
-      - {x: 0.91999996, y: -1.1999999}
-      - {x: 1.03, y: -1.23}
-      - {x: 1.2099999, y: -1.24}
-      - {x: 1.8299999, y: -1.26}
-      - {x: 1.9699999, y: -1.2099999}
-      - {x: 2.11, y: -1.17}
-      - {x: 2.3, y: -1.06}
-      - {x: 2.34, y: -1.01}
-      - {x: 2.4199998, y: -0.89}
-      - {x: 2.46, y: -0.69}
-      - {x: 2.46, y: -0.53999996}
-      - {x: 2.45, y: -0.29999998}
-      - {x: 2.35, y: -0.12}
-      - {x: 2.22, y: 0.049999997}
-      - {x: 2.08, y: 0.29}
-      - {x: 1.91, y: 0.47}
-      - {x: 1.73, y: 0.61}
-      - {x: 1.5999999, y: 0.66999996}
-      - {x: 1.5699999, y: 0.78}
-      - {x: 1.5, y: 0.90999997}
-      - {x: 1.3199999, y: 1.0799999}
-      - {x: 1.23, y: 1.14}
-      - {x: 1.04, y: 1.23}
-      - {x: 0.65999997, y: 1.23}
-      - {x: 0.48999998, y: 1.1899999}
-      - {x: 0.22, y: 1.06}
-      - {x: 0.13, y: 0.96}
-      - {x: -0.03, y: 0.7}
-      - {x: -0.29999998, y: 0.45999998}
-      - {x: -0.52, y: 0.32}
-      - {x: -0.76, y: 0.29999998}
-      - {x: -0.78, y: 0.32999998}
-      - {x: -0.90999997, y: 0.32}
-      - {x: -1.24, y: 0.32999998}
-      - {x: -1.4599999, y: 0.41}
-      - {x: -1.73, y: 0.48999998}
-      - {x: -1.9, y: 0.48999998}
-      - {x: -1.99, y: 0.42999998}
-      - {x: -2.1299999, y: 0.31}
-      - {x: -2.22, y: 0.14}
-      - {x: -2.34, y: 0.01}
-      - {x: -2.34, y: -0.29}
-      - {x: -2.28, y: -0.39}
-      - {x: -2.22, y: -0.45}
-      - {x: -2.02, y: -0.56}
-      - {x: -1.91, y: -0.94}
-      - {x: -1.8299999, y: -1.1}
-      - {x: -1.65, y: -1.1999999}
-      - {x: -1.5899999, y: -1}
-      - {x: -1.63, y: -0.88}
-      - {x: -1.42, y: -0.58}
-      - {x: -1.3199999, y: -0.72999996}
-      - {x: -1.18, y: -1.03}
-      - {x: -1.0699999, y: -1.13}
-      - {x: -1.04, y: -1.13}
-      - {x: -1.01, y: -1.1}
-      - {x: -0.97999996, y: -0.71999997}
-      - {x: -0.84, y: -0.68}
-      - {x: -0.69, y: -0.71999997}
-      - {x: -0.61, y: -1.03}
-      - {x: -0.57, y: -1.1}
-      - {x: -0.42999998, y: -1.26}
-      - {x: -0.39, y: -1.26}
-      - {x: -0.35999998, y: -1.23}
-      - {x: -0.35, y: -0.85999995}
-      - {x: -0.29999998, y: -0.77}
+  serializedVersion: 2
+  m_Size: {x: 3.2479355, y: 1.4965926}
+  m_EdgeRadius: 0
 --- !u!114 &2145508803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agoCollider: {fileID: 2145508802}
+  parentObj: {fileID: 380418737}
 --- !u!50 &2145508804
 Rigidbody2D:
   serializedVersion: 4
