@@ -31,7 +31,7 @@ public class EnemyMove : MonoBehaviour {
     {
         GameObject enemy = Instantiate(fish[i]) as GameObject;
         float px = Random.Range(-15f, 15f);
-        float py = Random.Range(-8.0f, 8.0f);
+        float py = Random.Range(-7.5f, 8.0f);
         enemy.transform.SetParent(canvas.transform, false);
         enemy.transform.position = new Vector2(px, py);
     } 

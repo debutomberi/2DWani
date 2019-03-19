@@ -117,6 +117,6 @@ public class EnemyController : MonoBehaviour {
         switching3 = false;
         speed = 0;
         rd.gravityScale = 0;
-        Debug.Log("tata");
+        //Debug.Log("tata");
     }
 }
