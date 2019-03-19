@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
-    int second = 0;
-    int minute = 1;
+    int second = 30;
+    int minute = 0;
 
     [SerializeField]
     Text timerText;
