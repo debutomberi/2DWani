@@ -35,7 +35,9 @@ public class WaniBite : MonoBehaviour {
 
             if (Input.GetButton("swallow")) {
 
-                foreach(Transform transform in parentObj.transform)
+                ScoreManager.Instance.ScorePlus(fishCount);
+
+                foreach (Transform transform in parentObj.transform)
                 {
 
                     var childObj = transform.gameObject;
@@ -44,8 +46,6 @@ public class WaniBite : MonoBehaviour {
                 }
 
                 fishCount = 0;
-
-                ScoreManager.Instance.ScorePlus(fishCount);
 
                 Debug.Log("ごっくん！");
 
