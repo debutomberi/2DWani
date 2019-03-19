@@ -7,10 +7,12 @@ public class PlayerContorol : MonoBehaviour {
 
     // 速度
     float speed = 0.1f;
+    float speedDown;
 	
 	// Update is called once per frame
 	void Update () {
 
+        SpeedDown();
         // 移動処理
         Move();
 
@@ -21,7 +23,7 @@ public class PlayerContorol : MonoBehaviour {
         float inputX = Input.GetAxisRaw("Horizontal");
         float inputY = Input.GetAxisRaw("Vertical");
 
-        this.transform.position += new Vector3(inputX * speed, inputY * speed, 0);
+        this.transform.position += new Vector3(inputX * speedDown, inputY * speedDown, 0);
 
         Vector3 scale = transform.localScale;
 
@@ -47,7 +49,8 @@ public class PlayerContorol : MonoBehaviour {
     void SpeedDown()
     {
         float childCount = WaniBite.fishCount; // 子オブジェクトの数を取得
-        float bobSpeed = childCount * 0.001f;　// 重さ
-        speed = speed - bobSpeed;              
+        float bobSpeed = childCount * 0.004f;　// 重さ
+        speedDown = speed - bobSpeed;
+        if (speedDown < 0) { speedDown = 0.001f; }             
     }
 }
