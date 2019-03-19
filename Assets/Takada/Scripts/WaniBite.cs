@@ -35,11 +35,23 @@ public class WaniBite : MonoBehaviour {
     // 飲み込む関数
     void Swallow() {
 
+
+
         // 魚を含んでいる時に飲み込むボタンを押すとカウントを0にして敵も消す。
         if (fishCount >= 1) {
 
             if (Input.GetButton("swallow")) {
+
+                // ゲームオブジェクトの子のTransformを列挙
+                foreach (Transform transform in parentObj.transform)
+                {
+
+                    var childObj = transform.gameObject;
+                    Destroy(childObj);
+                }
+
                 fishCount = 0;
+                
                 Debug.Log("ごっくん！");
 
             }
