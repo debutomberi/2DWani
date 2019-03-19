@@ -10,7 +10,6 @@ public class WaniBite : MonoBehaviour {
     // Enemy(親オブジェクト)
     public GameObject parentObj;
 
-
 	// Use this for initialization
 	void Start () {
 
@@ -20,6 +19,7 @@ public class WaniBite : MonoBehaviour {
 	void Update () {
 
         // 飲み込む処理
+        
         Swallow();
 
         //子要素を数える処理
@@ -32,8 +32,7 @@ public class WaniBite : MonoBehaviour {
 
         // 魚を含んでいる時に飲み込むボタンを押すとカウントを0にして敵も消す。
         if (fishCount >= 1) {
-
-            if (Input.GetButton("swallow")) {
+            if (Input.GetButtonDown("swallow")) {
 
                 ScoreManager.Instance.ScorePlus(fishCount);
 
@@ -44,7 +43,7 @@ public class WaniBite : MonoBehaviour {
                     Destroy(childObj);
 
                 }
-
+                
                 fishCount = 0;
 
                 Debug.Log("ごっくん！");
