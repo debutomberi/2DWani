@@ -10,15 +10,9 @@ public class WaniBite : MonoBehaviour {
     // Enemy(親オブジェクト)
     public GameObject parentObj;
 
-    // スクリプト受け取り用変数
-    ScoreManager script;
-
 
 	// Use this for initialization
 	void Start () {
-
-        // scriptを変数に格納
-        script = GetComponent<ScoreManager>();
 
     }
 	
@@ -41,12 +35,18 @@ public class WaniBite : MonoBehaviour {
 
             if (Input.GetButton("swallow")) {
 
-                
+                foreach(Transform transform in parentObj.transform)
+                {
 
-                script.ScorePlus(fishCount);
+                    var childObj = transform.gameObject;
+                    Destroy(childObj);
+
+                }
 
                 fishCount = 0;
-                
+
+                ScoreManager.Instance.ScorePlus(fishCount);
+
                 Debug.Log("ごっくん！");
 
             }
