@@ -109,16 +109,14 @@ public class EnemyController : MonoBehaviour {
         transform.localScale = Scale;
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "ago")
-        {
-            transform.parent = col.gameObject.transform;
-            switching2 = false;
-            switching3 = false;
-            speed = 0;
-            rd.gravityScale = 0;
-            Debug.Log("tata");
-        }
+        transform.parent = col.gameObject.transform;
+        switching2 = false;
+        switching3 = false;
+        speed = 0;
+        rd.gravityScale = 0;
+        Debug.Log("tata");
     }
 }
