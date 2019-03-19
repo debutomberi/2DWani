@@ -4,11 +4,8 @@ using UnityEngine;
 
 public class WaniBite : MonoBehaviour {
 
-    // 顎の当たり判定
-    public Collider2D agoCollider;
-
     // 口の中に含んでいる魚の数(子オブジェクトの数)
-    public static float fishCount;
+    public static int fishCount;
 
     // Enemy(親オブジェクト)
     public GameObject parentObj;
@@ -16,9 +13,6 @@ public class WaniBite : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-        // 当たり判定の取得
-        agoCollider = GetComponent<Collider2D>();
 
     }
 	
@@ -30,28 +24,29 @@ public class WaniBite : MonoBehaviour {
 
         //子要素を数える処理
         ChildCount();
-	}
+
+    }
 
     // 飲み込む関数
     void Swallow() {
-
-
 
         // 魚を含んでいる時に飲み込むボタンを押すとカウントを0にして敵も消す。
         if (fishCount >= 1) {
 
             if (Input.GetButton("swallow")) {
 
-                // ゲームオブジェクトの子のTransformを列挙
-                foreach (Transform transform in parentObj.transform)
+                foreach(Transform transform in parentObj.transform)
                 {
 
                     var childObj = transform.gameObject;
                     Destroy(childObj);
+
                 }
 
                 fishCount = 0;
-                
+
+                ScoreManager.Instance.ScorePlus(fishCount);
+
                 Debug.Log("ごっくん！");
 
             }
