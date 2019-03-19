@@ -15,7 +15,8 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager> {
 
     //スコアの加算式
     public void ScorePlus(int enemyCount) {
-        double i = 100 * (1 + (enemyCount * 0.2));
+        double i = (10 *enemyCount) * (1 + (enemyCount-1 * 0.2));
+        Debug.Log(i);
         score += (int)i;
     }
 
